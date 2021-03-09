@@ -1,24 +1,12 @@
 import math
 from random import randint
+from utils import is_prime
 
-# raw_input() reads a string with a line of input, stripping the '\n' (newline) at the end.
+# input() reads a string with a line of input, stripping the '\n' (newline) at the end.
 # This is all you need for most Google Code Jam problems.
-t = int(raw_input())  # read a line with a single integer
+t = int(input())  # read a line with a single integer
 
 print("Case #1:")
-
-# Check if a number is prime
-def is_prime_number (number):
-	# prime numbers are greater than 1
-	if (number > 1):
-		for i in xrange(2, int(number**0.5) + 1):
-			"""if variable number divided by any number greater than 1 and smaller than that variable number gets rest = 0, 
-			than it`s not a prime number""" 
-			if (int(number) % i == 0): 
-				return False
-		return True	
-	else:
-		return False
 
 # return the number in base X
 def base_x (sequence, x):
